@@ -1,0 +1,58 @@
+<HTML>
+<TITLE>
+Email contact form
+</TITLE>
+<body>
+<font face=verdana size=2>
+<?php
+ 
+$email_from = "lakily03@gmail.com";
+mail($email_address, "Msg From: " . $user_name ." Comments/Suggestions", $message, "From: ". $email_from);
+ 
+echo "Thanks for your comments/suggestions <B>". $user_name . "</B> we have recieved your message and will contact you soon.";
+?>
+</font>
+</body>
+</HTML>
+<HTML>
+<TITLE>
+Contact Us Form
+</TITLE>
+<HEAD>
+<style>
+a:hover {color:red}
+ 
+.small_txt
+{
+   font-weight: normal;
+   font-size: 86%;
+   color: #000000;
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+ 
+</style>
+</HEAD>
+<BODY bgcolor=#ffffff>
+<Center><font size=2><font class=small_txt size=2><B>
+Thanks for spending time on our site your comments/suggestions will help us improve! <P></P>
+Please fill in all the details
+</B></font></font>
+<font size=2>
+<form method=post action=email_form.php>
+<Table border=0 cellspacing=0 cellpadding=0 class=small_txt>
+ 
+<TR><TD width=150><font class=small_txt><B>Your Name: </B></font></TD>
+<TD><input type=text class=small_txt name=user_name size=50></TD></TR>
+ 
+<TR><TD width=150><font class=small_txt><B>Your Email address: </B></font></TD>
+<TD><input type=text class=small_txt name=email_address size=50></TD></TR>
+ 
+ 
+<TR><TD width=150><font class=small_txt><B>Comments Suggestions: </B></font></TD>
+<TD><TEXTAREA rows=5 cols=49 name=email_message class=small_txt></TEXTAREA></TD></TR>
+</Table>
+<P></P>
+<input type=submit value="Submit" class=small_txt>
+</form></font></center>
+</body>
+</html>
